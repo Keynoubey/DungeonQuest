@@ -1,0 +1,20 @@
+name: DungeonQuest
+version: 1.0.0
+main: de.dungeonquest.DungeonQuest
+api-version: '26.2'
+author: Michael
+description: Dungeons mit Bossen, Custom Mobs, Schwierigkeitsstufen und Belohnungen.
+
+commands:
+  dungeon:
+    description: DungeonQuest Hauptbefehl
+    usage: /dungeon help
+    aliases: [dg, dungeons]
+
+permissions:
+  dungeonquest.use:
+    description: Dungeons finden (/dungeon locate)
+    default: true
+  dungeonquest.admin:
+    description: Dungeons erstellen, entfernen, zuruecksetzen
+    default: op

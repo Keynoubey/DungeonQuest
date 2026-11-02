@@ -1,0 +1,122 @@
+# ============================================================
+#  DungeonQuest - Einstellungen
+#  Nach Aenderungen: /dungeon reload
+# ============================================================
+
+# In welcher Welt sollen die Dungeons entstehen?
+welt: world
+
+# Duerfen alle Spieler mit /dungeon locate den naechsten Dungeon suchen?
+locate-erlaubt: true
+
+# Nach dem Boss-Sieg wird der Dungeon nach dieser Zeit zurueckgesetzt
+respawn-minuten: 45
+
+# Allen Spielern im Chat melden, wenn ein Boss besiegt wurde?
+broadcast-sieg: true
+
+# Automatische Erzeugung beim allerersten Start
+auto-dungeons:
+  aktiv: true
+  # Mindestabstand zwischen zwei Dungeons (Bloecke)
+  mindestabstand: 500
+  # Pause zwischen zwei Platzierungsversuchen (Ticks, 20 = 1 Sekunde)
+  versuch-intervall-ticks: 40
+  # Wie viele Dungeons pro Stufe?
+  anzahl:
+    EASY: 4
+    NORMAL: 4
+    HARD: 3
+    NIGHTMARE: 2
+    INFERNO: 1
+  # Wie viele Tuerme an der Oberflaeche pro Stufe? (je hoeher der Turm, desto schwerer)
+  turm-anzahl:
+    EASY: 3
+    NORMAL: 3
+    HARD: 2
+    NIGHTMARE: 2
+    INFERNO: 1
+  # Entfernung zum Weltspawn (je weiter weg, desto haerter)
+  ringe:
+    EASY:
+      min: 300
+      max: 1200
+    NORMAL:
+      min: 1000
+      max: 2200
+    HARD:
+      min: 2000
+      max: 3200
+    NIGHTMARE:
+      min: 3000
+      max: 4500
+    INFERNO:
+      min: 4000
+      max: 6000
+
+# Chance pro Spieler und besiegtem Dungeon auf ein seltenes Spezial-Item
+# (0.12 = 12 %). Seltene Items: Windstiefel, Schwingen, Sturmdreizack,
+# Titanenhammer, Ewige Spitzhacke, Aegis-Schild, Drachenei
+seltene-items:
+  EASY: 0.0
+  NORMAL: 0.0
+  HARD: 0.02
+  NIGHTMARE: 0.06
+  INFERNO: 0.12
+
+# Skalierung bei mehreren Spielern im Dungeon (pro zusaetzlichem Spieler)
+skalierung:
+  pro-extra-spieler-mob-leben: 0.6
+  pro-extra-spieler-mob-anzahl: 0.5
+  pro-extra-spieler-boss-leben: 0.8
+  pro-extra-spieler-schaden: 0.15
+
+# Werte pro Schwierigkeit
+#  raeume          = Anzahl Kampfraeume vor dem Boss
+#  mobs-pro-raum   = Gegner pro Raum (bei 1 Spieler)
+#  mob-leben       = Multiplikator auf das normale Leben der Mobs
+#  mob-schaden     = Multiplikator auf den Schaden der Mobs
+#  elite-chance    = Chance auf Elite-Mobs (0.10 = 10 %)
+#  boss-leben      = Leben des Bosses (bei 1 Spieler, max. ca. 1900)
+#  boss-schaden    = Multiplikator auf den Schaden des Bosses
+schwierigkeiten:
+  EASY:
+    raeume: 3
+    mobs-pro-raum: 4
+    mob-leben: 1.0
+    mob-schaden: 1.0
+    elite-chance: 0.05
+    boss-leben: 150
+    boss-schaden: 1.0
+  NORMAL:
+    raeume: 4
+    mobs-pro-raum: 5
+    mob-leben: 1.4
+    mob-schaden: 1.25
+    elite-chance: 0.10
+    boss-leben: 280
+    boss-schaden: 1.25
+  HARD:
+    raeume: 5
+    mobs-pro-raum: 6
+    mob-leben: 2.0
+    mob-schaden: 1.6
+    elite-chance: 0.18
+    boss-leben: 450
+    boss-schaden: 1.6
+  NIGHTMARE:
+    raeume: 6
+    mobs-pro-raum: 7
+    mob-leben: 3.0
+    mob-schaden: 2.0
+    elite-chance: 0.28
+    boss-leben: 700
+    boss-schaden: 2.0
+  INFERNO:
+    raeume: 7
+    mobs-pro-raum: 8
+    mob-leben: 4.5
+    mob-schaden: 2.5
+    elite-chance: 0.40
+    boss-leben: 900
+    boss-schaden: 2.5
